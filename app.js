@@ -18,10 +18,12 @@ function changeSize(){
   const inputHeight = document.querySelector('#height').value.trim()
   const inputWidth = document.querySelector('#width').value.trim()
   document.querySelector('#dado1').style.height = inputHeight + 'px'
-  document.querySelector('#dado1').style.width = '${inputWidth}px'
+  document.querySelector('#dado1').style.width = `${inputWidth}px`
   document.querySelector('#dado2').style.height = inputHeight + 'px'
-  document.querySelector('#dado2').style.width = '${inputWidth}px'
+  document.querySelector('#dado2').style.width = `${inputWidth}px`
 }
 
 let btnChangeSize = document.querySelector('#btnChangeSize')
 btnChangeSize.addEventListener('click',changeSize);
+
+setInterval(lanzarDados,3000);
